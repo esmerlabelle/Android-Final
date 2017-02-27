@@ -3,138 +3,147 @@
 
     <item
         is-multidex="true"
-        jar="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="10cde7580d3788906de255f85db74e3c6c1a3c59">
-        <dex dex="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_d1b3d9f15f1c7e97d9a2d49f884a6cee0c98cc6a/classes.dex" />
+        sha1="810f41e5b7fd99f196ebeabe865ba2c54e7e76dc">
+        <dex dex="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.2.0_5fd644d14e1ec6f0ec5ce00b050492222ef58f8b/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.1/jars/classes.jar"
+        jar="/home/elabelle/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.2.0/support-annotations-25.2.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
-        <dex dex="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.1.1_7737ec853bf978523ec370de6278e33b71da3efa/classes.dex" />
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.2.0_7e377695d78f9dbc66e930f3648ca3254329cbf1/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/exploded-aar/com.android.support/design/25.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="2af4b8e31b0d1d92ee0716981648b1d5f8594310">
-        <dex dex="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_efd206078c5ba652005ba180730ab53a4418192d/classes.dex" />
+        sha1="ea6a989b83d19b1b461281e0475a6cd6514897f8">
+        <dex dex="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.2.0_35e585588fb58e57f17597303f25c86a90af0835/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
-        <dex dex="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.1.1_cb17a7e0806a1ecfa0ae98122e322811e2996751/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/elabelle/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.1/support-annotations-25.1.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
-        <dex dex="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.1_95d904e24650232a68e78aeac0726ebe4227377c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
-        <dex dex="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.1.1_58f2df7fbb8ea3e24f646e3e051431575773fac1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
-        <dex dex="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.1.1_d916d0afbd154e75019f66e3d25f7f90d75353e4/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/jars/classes.jar"
+        jar="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.1.1_94c9b668034ef0b1f78bc0bcfcdf998b3af20e9e/classes.dex" />
+        <dex dex="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.2.0_d7a87f52aa1ea0e2cc2a21d9de0aca93236983d9/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.1/jars/classes.jar"
+        jar="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
-        <dex dex="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.1.1_9d2873c0471f3bde1e80a01c1295f6e206f74349/classes.dex" />
+        sha1="cb454b52545859ed2f24a6c01366805b0fa04b22">
+        <dex dex="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.2.0_b9fb9be245753bd8156c511ca81aa4e161683869/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/jars/classes.jar"
+        jar="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
-        <dex dex="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.1.1_0a0b00e9398ece7e8e0afab608238e47b3d91b02/classes.dex" />
+        sha1="152de8da301561dcb0946471697a420d8f7a68c5">
+        <dex dex="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.2.0_4415532d7f1ec621693dd2f0ab39ed1c049d16f8/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/jars/classes.jar"
+        jar="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
-        <dex dex="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.1.1_c3d6dcf4b7656106c6ea566bc295ed62796075de/classes.dex" />
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.2.0_5844ea5c95cf8c0056f7e5c5e384bbec8f654df6/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/jars/classes.jar"
+        jar="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/exploded-aar/com.android.support/transition/25.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
-        <dex dex="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.1.1_86908290efd6f3a0170e8bfa008dbeff17a148fb/classes.dex" />
+        sha1="e51c2f662bb72419632af5192553c37e33890a99">
+        <dex dex="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.2.0_b4527c75010156cc96b74616b06bb06a971b09b3/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/jars/classes.jar"
+        jar="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
-        <dex dex="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.1_767d3bbba66df34ef985d0169cfc6dce8d11f652/classes.dex" />
+        sha1="1b41c764934519c50e6365f878b473955fd5fd16">
+        <dex dex="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_37e3712ca8b7f51e0ee1b2ce40afda49e74aaab0/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/jars/classes.jar"
+        jar="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
-        <dex dex="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.1.1_b87808ba6a74fd9b55407d5a2fd6a3e0f022f897/classes.dex" />
+        sha1="58d4dea2a0144c5bae9cd074af5d7916ccf8b153">
+        <dex dex="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4d084663d2d3896bcf5dd31f054d2a3d133b8d82/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/jars/classes.jar"
+        jar="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
-        <dex dex="/home/elabelle/AndroidStudioProjects/CP282Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.1.1_8f2a5760dfcbad3b42c37f4993ca1610eac50768/classes.dex" />
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.2.0_adf660b61da5261a719d52113fbfc0c837cc9cce/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/exploded-aar/com.getbase/floatingactionbutton/1.10.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f40cf334cdc8b098b74312e21c7741c6eefbeb0e">
+        <dex dex="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.getbase-floatingactionbutton-1.10.1_d1cc67597e1113eebdf0746c20141f8744f0ece2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.2.0_4d906713d19869b16f5fdbf0ea3c6fa7c0934886/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="702d339bc0a81d21354cd7e2cf2b67225fa4a16c">
+        <dex dex="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.2.0_ba9bbaf7c7d800ded590acef5c9424e70489697f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.2.0_882653e61535b9bcd0e033d3f1af659fbbc6f627/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="/home/elabelle/documents/android_projects/Android-Final/Android-Final/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.2.0_ab684132e11ffa24130cc4a1a33078e4895fca43/classes.dex" />
     </item>
 
 </items>

@@ -4,9 +4,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.design.widget.FloatingActionButton;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
@@ -20,21 +19,23 @@ import android.view.View;
 import com.example.elabelle.cp282final.R;
 import com.example.elabelle.cp282final.fragments.CategoriesFragment;
 import com.example.elabelle.cp282final.fragments.HomeFragment;
+import com.example.elabelle.cp282final.fragments.NoteFragment;
 import com.example.elabelle.cp282final.fragments.NotebookFragment;
 import com.example.elabelle.cp282final.fragments.TagsFragment;
 
 public class MainActivity extends AppCompatActivity
         implements HomeFragment.OnFragmentInteractionListener,
         CategoriesFragment.OnFragmentInteractionListener,
+        NoteFragment.OnFragmentInteractionListener,
         NotebookFragment.OnFragmentInteractionListener,
         TagsFragment.OnFragmentInteractionListener {
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
-    private FloatingActionButton floatingActionButton;
 
     // tags used to attach the fragments
     private static final String TAG_HOME = "home";
+    private static final String TAG_NOTE = "note";
     private static final String TAG_NOTEBOOKS = "notebooks";
     private static final String TAG_CATEGORIES = "categories";
     private static final String TAG_TAGS = "tags";
@@ -43,11 +44,6 @@ public class MainActivity extends AppCompatActivity
     // index to identify current nav menu item
     public static int navItemIndex = 0;
 
-    // toolbar titles respected to selected nav menu item
-    private String[] activityTitles;
-
-    // load home frag when back key is pressed
-    private boolean shouldLoadHomeFragOnBackPress = true;
     private Handler handler;
 
     @Override
@@ -61,18 +57,8 @@ public class MainActivity extends AppCompatActivity
 
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        floatingActionButton = (FloatingActionButton) findViewById(R.id.floating_action_button);
 
-        // load titles from string resources
-        activityTitles = getResources().getStringArray(R.array.nav_item_activity_titles);
-
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        //createFABMenu();
 
         setUpNavigationView();
 
@@ -86,9 +72,6 @@ public class MainActivity extends AppCompatActivity
     private void loadHomeFragment() {
         // select nav menu item
         selectNavMenu();
-
-        // set toolbar title
-        setToolbarTitle();
 
         if (getSupportFragmentManager().findFragmentByTag(CURRENT_TAG) != null) {
             drawerLayout.closeDrawers();
@@ -109,39 +92,29 @@ public class MainActivity extends AppCompatActivity
             }
         };
 
-        if (runnable != null) {
-            handler.post(runnable);
-        }
-
-        toggleFab();
+        handler.post(runnable);
 
         drawerLayout.closeDrawers();
     }
     private Fragment getHomeFragment() {
-        switch (navItemIndex) {
-            case 0:
+        switch (CURRENT_TAG) {
+            case TAG_HOME:
                 // home
-                HomeFragment homeFragment = new HomeFragment();
-
-                return homeFragment;
-            case 1:
+                return new HomeFragment();
+            case TAG_NOTEBOOKS:
                 // notebook
-                NotebookFragment notebookFragment = new NotebookFragment();
-                return notebookFragment;
-            case 2:
+                return new NotebookFragment();
+            case TAG_CATEGORIES:
                 // categories
-                CategoriesFragment categoriesFragment = new CategoriesFragment();
-                return categoriesFragment;
-            case 3:
+                return new CategoriesFragment();
+            case TAG_TAGS:
                 // tags
-                TagsFragment tagsFragment = new TagsFragment();
-                return tagsFragment;
+                return new TagsFragment();
+            case TAG_NOTE:
+                return new NoteFragment();
             default:
                 return new HomeFragment();
         }
-    }
-    private void setToolbarTitle() {
-        getSupportActionBar().setTitle(activityTitles[navItemIndex]);
     }
     private void selectNavMenu() {
         navigationView.getMenu().getItem(navItemIndex).setChecked(true);
@@ -150,7 +123,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
-                    public boolean onNavigationItemSelected(MenuItem menuItem) {
+                    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                         menuItem.setChecked(true);
                         drawerLayout.closeDrawers();
 
@@ -189,6 +162,8 @@ public class MainActivity extends AppCompatActivity
                         }
                         menuItem.setChecked(true);
 
+                        loadHomeFragment();
+
                         return true;
                     }
                 });
@@ -210,7 +185,7 @@ public class MainActivity extends AppCompatActivity
         };
 
         //Setting the actionbarToggle to drawer layout
-        drawerLayout.setDrawerListener(actionBarDrawerToggle);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
 
         //calling sync state is necessary or else your hamburger icon wont show up
         actionBarDrawerToggle.syncState();
@@ -222,24 +197,16 @@ public class MainActivity extends AppCompatActivity
             return;
         }
 
-        if (shouldLoadHomeFragOnBackPress) {
-            if (navItemIndex != 0) {
-                navItemIndex = 0;
-                CURRENT_TAG = TAG_HOME;
-                loadHomeFragment();
-                return;
-            }
+        if (!(CURRENT_TAG.equals(TAG_HOME))) {
+            navItemIndex = 0;
+            CURRENT_TAG = TAG_HOME;
+            loadHomeFragment();
+            return;
         }
         super.onBackPressed();
     }
     @Override
     public void onFragmentInteraction(Uri uri) {
 
-    }
-    private void toggleFab() {
-        if (navItemIndex == 0)
-            floatingActionButton.show();
-        else
-            floatingActionButton.hide();
     }
 }

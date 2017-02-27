@@ -1,0 +1,42 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.elabelle.cp282final.fragments.NoteFragment">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            style="@style/FullWidthEditText"
+            android:id="@+id/title"
+            android:hint="@string/fragment_note_title"
+            android:maxLines="1"
+            android:inputType="textCapSentences" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+        <EditText
+            style="@style/FullWidthEditText"
+            android:id="@+id/content"
+            android:hint="@string/fragment_note_content"
+            android:inputType="textCapSentences|textMultiLine"
+            android:minLines="6"
+            android:gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:scrollbars="vertical" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+        <EditText
+            style="@style/FullWidthEditText"
+            android:id="@+id/tags"
+            android:hint="@string/fragment_note_tags"
+            android:minLines="1"
+            android:maxLines="3"/>
+    </TableLayout>
+
+
+</ScrollView>
