@@ -4,8 +4,6 @@ package com.example.elabelle.cp282final.models;
 //import com.google.gson.Gson;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class BaseNote implements Serializable {
@@ -16,11 +14,8 @@ public class BaseNote implements Serializable {
     private Long lastModification;
     private Boolean archived;
     private Boolean trashed;
-    private Category category;
+    private Notebook notebook;
     private Boolean checklist;
-    private List<? extends BaseAttachment> attachmentsList = new ArrayList<BaseAttachment>();
-    private List<? extends BaseAttachment> attachmentsListOld = new ArrayList<BaseAttachment>();
-
     public BaseNote() {
         super();
         this.title = "";
@@ -32,7 +27,7 @@ public class BaseNote implements Serializable {
 
 
     public BaseNote(Long creation, Long lastModification, String title, String content, Integer archived,
-                    Integer trashed, Category category, Integer checklist) {
+                    Integer trashed, Notebook notebook, Integer checklist) {
         super();
         this.title = title;
         this.content = content;
@@ -40,7 +35,7 @@ public class BaseNote implements Serializable {
         this.lastModification = lastModification;
         this.archived = archived == 1;
         this.trashed = trashed == 1;
-        this.category = category;
+        this.notebook = notebook;
         this.checklist = checklist == 1;
     }
 
@@ -58,13 +53,8 @@ public class BaseNote implements Serializable {
         setLastModification(baseNote.getLastModification());
         setArchived(baseNote.isArchived());
         setTrashed(baseNote.isTrashed());
-        setCategory(baseNote.getCategory());
+        setNotebook(baseNote.getNotebook());
         setChecklist(baseNote.isChecklist());
-        ArrayList<BaseAttachment> list = new ArrayList<BaseAttachment>();
-        for (BaseAttachment mAttachment : baseNote.getAttachmentsList()) {
-            list.add(mAttachment);
-        }
-        setAttachmentsList(list);
     }
 
 
@@ -178,13 +168,14 @@ public class BaseNote implements Serializable {
         this.trashed = trashed == 1;
     }
 
-    public Category getCategory() {
-        return category;
+
+    public Notebook getNotebook() {
+        return notebook;
     }
 
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setNotebook(Notebook notebook) {
+        this.notebook = notebook;
     }
 
 
@@ -203,35 +194,6 @@ public class BaseNote implements Serializable {
     }
 
 
-    public List<? extends BaseAttachment> getAttachmentsList() {
-        return attachmentsList;
-    }
-
-
-    public void setAttachmentsList(List<? extends BaseAttachment> attachmentsList) {
-        this.attachmentsList = attachmentsList;
-    }
-
-
-    public void backupAttachmentsList() {
-        List<BaseAttachment> attachmentsListOld = new ArrayList<BaseAttachment>();
-        for (BaseAttachment mAttachment : getAttachmentsList()) {
-            attachmentsListOld.add(mAttachment);
-        }
-        this.attachmentsListOld = attachmentsListOld;
-    }
-
-
-    public List<? extends BaseAttachment> getAttachmentsListOld() {
-        return attachmentsListOld;
-    }
-
-
-    public void setAttachmentsListOld(List<? extends BaseAttachment> attachmentsListOld) {
-        this.attachmentsListOld = attachmentsListOld;
-    }
-
-
     @Override
     public boolean equals(Object o) {
         boolean res = false;
@@ -243,10 +205,10 @@ public class BaseNote implements Serializable {
         }
 
         /*Object[] a = {getTitle(), getContent(), getCreation(), getLastModification(), isArchived(),
-                isTrashed(), getBaseCategory(), isChecklist() };
+                isTrashed(), getCategory(), isChecklist() };
         Object[] b = {baseNote.getTitle(), baseNote.getContent(), baseNote.getCreation(),
                 baseNote.getLastModification(), baseNote.isArchived(), baseNote.isTrashed(),
-                baseNote.getBaseCategory(), baseNote.isChecklist()};
+                baseNote.getCategory(), baseNote.isChecklist()};
         if (EqualityChecker.check(a, b)) {
             res = true;
         }*/
@@ -256,7 +218,7 @@ public class BaseNote implements Serializable {
 
 
     public boolean isChanged(BaseNote note) {
-        return !equals(note) || !getAttachmentsList().equals(note.getAttachmentsList());
+        return !equals(note);
     }
 
 
@@ -264,7 +226,7 @@ public class BaseNote implements Serializable {
         BaseNote emptyNote = new BaseNote();
         // Field to exclude for comparison
         emptyNote.setCreation(getCreation());
-        emptyNote.setCategory(getCategory());
+        emptyNote.setNotebook(getNotebook());
         // Check
         return !isChanged(emptyNote);
     }

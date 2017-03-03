@@ -3,9 +3,6 @@ package com.example.elabelle.cp282final.models;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by elabelle on 2/19/17.
  */
@@ -21,8 +18,8 @@ public class Note extends BaseNote implements Parcelable {
 
 
     public Note(Long creation, Long lastModification, String title, String content, Integer archived,
-                Integer trashed, Category category, Integer checklist) {
-        super(creation, lastModification, title, content, archived, trashed, category, checklist);
+                Integer trashed, Notebook notebook, Integer checklist) {
+        super(creation, lastModification, title, content, archived, trashed, notebook, checklist);
     }
 
 
@@ -39,45 +36,9 @@ public class Note extends BaseNote implements Parcelable {
         setContent(in.readString());
         setArchived(in.readInt());
         setTrashed(in.readInt());
-        setCategory((Category) in.readParcelable(Category.class.getClassLoader()));
+        setNotebook((Notebook) in.readParcelable(Notebook.class.getClassLoader()));
         setChecklist(in.readInt());
-        in.readList(getAttachmentsList(), Attachment.class.getClassLoader());
     }
-
-
-    public List<Attachment> getAttachmentsList() {
-        return (List<Attachment>) super.getAttachmentsList();
-    }
-
-
-    public void setAttachmentsList(ArrayList<Attachment> attachmentsList) {
-        super.setAttachmentsList(attachmentsList);
-    }
-
-
-    public void addAttachment(Attachment attachment) {
-        List<Attachment> attachmentsList = ((List<Attachment>) super.getAttachmentsList());
-        attachmentsList.add(attachment);
-        setAttachmentsList(attachmentsList);
-    }
-
-
-    public void removeAttachment(Attachment attachment) {
-        List<Attachment> attachmentsList = ((List<Attachment>) super.getAttachmentsList());
-        attachmentsList.remove(attachment);
-        setAttachmentsList(attachmentsList);
-    }
-
-
-    public List<Attachment> getAttachmentsListOld() {
-        return (List<Attachment>) super.getAttachmentsListOld();
-    }
-
-
-    public void setAttachmentsListOld(ArrayList<Attachment> attachmentsListOld) {
-        super.setAttachmentsListOld(attachmentsListOld);
-    }
-
 
     public boolean isPasswordChecked() {
         return passwordChecked;
@@ -89,20 +50,20 @@ public class Note extends BaseNote implements Parcelable {
     }
 
 
-    public Category getCategory() {
+    public Notebook getNotebook() {
         try {
-            return (Category) super.getCategory();
+            return (Notebook) super.getNotebook();
         } catch (ClassCastException e) {
-            return new Category(super.getCategory());
+            return new Notebook(super.getNotebook());
         }
     }
 
 
-    public void setCategory(Category category) {
-        if (category != null && category.getClass().equals(BaseCategory.class)) {
-            setCategory(new Category(category));
+    public void setNotebook(Notebook notebook) {
+        if (notebook != null && notebook.getClass().equals(BaseCategory.class)) {
+            setNotebook(new Notebook(notebook));
         }
-        super.setCategory(category);
+        super.setNotebook(notebook);
     }
 
 
@@ -120,9 +81,8 @@ public class Note extends BaseNote implements Parcelable {
         parcel.writeString(getContent());
         parcel.writeInt(isArchived() ? 1 : 0);
         parcel.writeInt(isTrashed() ? 1 : 0);
-        parcel.writeParcelable(getCategory(), 0);
+        parcel.writeParcelable(getNotebook(), 0);
         parcel.writeInt(isChecklist() ? 1 : 0);
-        parcel.writeList(getAttachmentsList());
     }
 
 

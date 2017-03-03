@@ -16,6 +16,15 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@android:color/darker_gray"/>
+        <Spinner
+            android:id="@+id/NotebookSpinner"
+            android:layout_width="match_parent"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
         <EditText
             style="@style/FullWidthEditText"
             android:id="@+id/content"

@@ -4,10 +4,10 @@
     android:layout_height="match_parent"
     tools:context="com.example.elabelle.cp282final.fragments.CategoriesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/categories_fragment" />
+        android:text="@string/categories_fragment_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
 </FrameLayout>
